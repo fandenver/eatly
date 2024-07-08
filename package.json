@@ -1,0 +1,26 @@
+{
+  "type": "module",
+  "name": "eatly",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^3.0.2",
+    "gulp": "^5.0.0",
+    "gulp-file-include": "^2.3.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-notify": "^4.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-version-number": "^0.2.4",
+    "gulp-webp-html-nosvg": "^1.1.1"
+  },
+  "devDependencies": {
+    "gulp-replace": "^1.1.4"
+  }
+}
