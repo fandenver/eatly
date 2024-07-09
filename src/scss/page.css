@@ -30,11 +30,6 @@ a.text {
   margin: 0 auto;
   padding: 0 20px;
 }
-@media (max-width: 479.98px) {
-  ._container {
-    padding: 0 10px;
-  }
-}
 
 .btn {
   cursor: pointer;
@@ -44,6 +39,7 @@ a.text {
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
+  white-space: nowrap;
 }
 
 html, body {
@@ -70,12 +66,23 @@ html, body {
   flex-direction: column;
 }
 .grade-page_header {
+  display: flex;
+  margin: 0 0 10px 0;
+}
+.grade-page_header hr {
+  align-self: center;
+  width: 55px;
+  height: 2px;
+  border-bottom: 1px solid rgba(32, 31, 31, 0.2);
+  margin: 0 20px 0 0;
+}
+.grade-page_header span {
   font-size: 15px;
   font-weight: 600;
   font-family: Poppins, sans-serif;
   line-height: 18px;
   color: rgba(32, 31, 31, 0.2);
-  margin: 0 0 10px 0;
+  letter-spacing: 2px;
 }
 .grade-page_title {
   font-family: Poppins, sans-serif;

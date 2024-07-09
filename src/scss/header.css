@@ -30,11 +30,6 @@ a.text {
   margin: 0 auto;
   padding: 0 20px;
 }
-@media (max-width: 479.98px) {
-  ._container {
-    padding: 0 10px;
-  }
-}
 
 .btn {
   cursor: pointer;
@@ -44,6 +39,7 @@ a.text {
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
+  white-space: nowrap;
 }
 
 .header_body {
@@ -63,6 +59,11 @@ a.text {
 }
 .header_links {
   display: flex;
+}
+@media (max-width: 767.98px) {
+  .header_links {
+    display: none;
+  }
 }
 .header_link {
   margin: 0 30px 0 0;
@@ -88,12 +89,29 @@ a.text {
   flex: 0 1 50%;
   align-items: center;
 }
+@media (max-width: 767.98px) {
+  .header_auth {
+    display: none;
+  }
+}
+.header_auth_burger-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 .header_login {
   margin: 0 20px 0 0;
   font-size: 17px;
   line-height: 27px;
   font-weight: 700;
   cursor: pointer;
+  color: #606060;
+}
+.header_login_burger-menu {
+  width: 100%;
+  text-align: center;
+  padding: 0 30px 0 30px;
+  margin: 0 0 10px 0;
 }
 .header_sing {
   color: #F9F9F9;
@@ -104,6 +122,92 @@ a.text {
   border-radius: 18px;
   padding: 15px 30px;
   cursor: pointer;
+}
+.header_sing_burger-menu {
+  color: #F9F9F9;
+  padding: 10px 20px;
+  width: 100%;
+  border-radius: 0;
+}
+.header_burger-menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.header_menu-container {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 100%;
+  animation: fadeIn 0.4s ease-in-out;
+}
+.header_menu-container._active {
+  display: block;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.header_menu-links {
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2509803922);
+  border-radius: 10px;
+}
+.header_menu-link {
+  text-align: center;
+  padding: 0 35px 0 35px;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 37px;
+  color: #606060;
+}
+
+.icon-menu {
+  display: none;
+}
+@media (max-width: 767.98px) {
+  .icon-menu {
+    display: block;
+    position: relative;
+    width: 31px;
+    height: 22px;
+    cursor: pointer;
+    z-index: 16;
+  }
+  .icon-menu span {
+    transition: all 0.3s ease 0s;
+    top: calc(50% - 1px);
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #282828;
+  }
+  .icon-menu span:first-child {
+    top: 0;
+  }
+  .icon-menu span:last-child {
+    top: auto;
+    bottom: 0;
+  }
+  .icon-menu._active span {
+    transform: scale(0);
+    background-color: #282828;
+  }
+  .icon-menu._active span:first-child {
+    transform: rotate(-45deg);
+    top: calc(50% - 1px);
+  }
+  .icon-menu._active span:last-child {
+    transform: rotate(45deg);
+    bottom: calc(50% - 1px);
+  }
 }
 
 /*# sourceMappingURL=header.css.map */

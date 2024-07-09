@@ -12,6 +12,7 @@ global.app = {
 }
 
 import {html} from "./gulp/tasks/html.js";
+import {reset} from "./gulp/tasks/reset.js";
 
 function watcher() {
     gulp.watch(path.watch.html, html)
@@ -19,6 +20,6 @@ function watcher() {
 
 const mainTasks = gulp.series(html);
 
-const dev = gulp.series(mainTasks, watcher);
+const dev = gulp.series(reset, mainTasks, watcher);
 
 gulp.task('default', dev);
