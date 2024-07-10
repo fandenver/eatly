@@ -32,6 +32,7 @@ a.text {
 }
 
 .btn {
+  font-family: Poppins, sans-serif;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -40,6 +41,13 @@ a.text {
   font-weight: 500;
   line-height: 24px;
   white-space: nowrap;
+  transition: all 0.3s ease 0s;
+  border-radius: 15px;
+}
+@media (min-width: 991.98px) {
+  .btn:hover {
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2509803922);
+  }
 }
 
 .header_body {

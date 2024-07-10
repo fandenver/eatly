@@ -3,8 +3,7 @@ const burgerMenuContainer = document.querySelector('.header_menu-container')
 
 let menuVisible = false;
 
-
-iconMenu.addEventListener('click', function (event) {
+iconMenu.addEventListener('click', function () {
     if (menuVisible) {
         burgerMenuContainer.style.display = 'none';
         iconMenu.classList.remove('_active');

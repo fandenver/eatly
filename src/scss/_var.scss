@@ -46,6 +46,7 @@ a.text {
 }
 
 .btn {
+  font-family: Poppins, sans-serif;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -54,4 +55,12 @@ a.text {
   font-weight: 500;
   line-height: 24px;
   white-space: nowrap;
+  transition: all 0.3s ease 0s;
+  border-radius: 15px;
+
+  @media (min-width: $md2+px) {
+    &:hover {
+      box-shadow: 0 4px 20px 0 #00000040;
+    }
+  }
 }
