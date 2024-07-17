@@ -33,6 +33,14 @@ html, body {
       margin: 0 0 50px 0;
     }
   }
+
+  &_restaurants {
+    margin: 0 0 100px 0;
+
+    @media (max-width: $md2+px) {
+      margin: 0 0 50px 0;
+    }
+  }
 }
 
 .grade-page {
@@ -308,7 +316,13 @@ html, body {
 .mobile-phone {
 
   &_container {
+
+  }
+
+  &_sub-container {
+    padding: 0 0 100px 0;
     display: flex;
+    border-bottom: 1px solid #CBCBCB;
 
     @media (max-width: $md2+px) {
       flex-direction: column-reverse;
@@ -317,6 +331,10 @@ html, body {
 
   &_column {
     flex: 0 1 50%;
+
+    &:first-child {
+      padding: 0 0 0 22px;
+    }
 
     @media (max-width: $md2+px) {
       display: flex;
@@ -371,7 +389,7 @@ html, body {
 
   &_list {
     margin: 0 0 60px 0;
-    padding: 0 0 0 30px;
+    padding: 0 0 0 22px;
 
     li {
       list-style-type: disc;
@@ -430,6 +448,237 @@ html, body {
         font-size: 16px;
         line-height: 20px;
       }
+    }
+  }
+}
+
+.restaurants-page {
+
+  &_container {
+  }
+
+  &_sub-container {
+    padding: 0 0 100px 0;
+    border-bottom: 1px solid #CBCBCB;
+  }
+
+  &_header {
+
+  }
+
+  &_pictures {
+    margin: 0 0 20px 0;
+  }
+
+  &_items {
+    display: flex;
+
+    @media (max-width: 1330px) {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  }
+
+  &_item {
+    flex: 0 1 33.333%;
+    padding: 0 18px;
+    margin: 0 0 40px 0;
+
+    @media (max-width: 1270px) {
+      display: flex;
+      justify-content: center;
+      flex: 0 1 50%;
+    }
+
+    @media (max-width: $md4+px) {
+      padding: 0 0;
+    }
+  }
+
+  &_content {
+    width: 386px;
+    border-radius: 35px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 20px 0 #00000040;
+    padding: 0 0 15px 0;
+
+    @media (max-width: $md4+px) {
+      width: 280px;
+    }
+  }
+
+  &_image {
+    position: relative;
+    flex: 0 1 176px;
+    margin: 0 0 15px 0;
+
+    @media (max-width: $md4+px) {
+      flex: 0 1 120px;
+    }
+
+    img {
+      position: absolute;
+      max-width: 100%;
+    }
+  }
+
+  &_inscriptions {
+    display: flex;
+    flex-direction: column;
+    padding: 0 35px;
+
+    @media (max-width: $md4+px) {
+      padding: 0 15px;
+    }
+  }
+
+  &_status {
+    display: flex;
+    text-align: center;
+
+    span {
+      flex: 0 1 66px;
+      border-radius: 5px;
+      color: #DAA31A;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 19px;
+      font-family: Poppins, sans-serif;
+      background-color: rgba(243, 175, 4, 0.2);
+      padding: 3px 0;
+    }
+
+    &_red {
+
+      span {
+        flex: 0 1 52px;
+        color: #FB471D;
+        background-color: rgba(246, 55, 7, 0.2);
+      }
+    }
+
+    @media (max-width: $md4+px) {
+      span {
+        font-size: 10px;
+        line-height: 15px;
+      }
+    }
+  }
+
+  &_title {
+    color: #323142;
+    font-family: Poppins, sans-serif;
+    font-size: 26px;
+    line-height: 42px;
+    font-weight: 600;
+
+    @media (max-width: $md4+px) {
+      font-size: 20px;
+      line-height: 33px;
+    }
+  }
+
+  &_info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &_grades {
+    display: flex;
+    justify-content: space-between;
+    flex: 0 1 150px;
+    align-items: center;
+  }
+
+  &_time {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #8E97A6;
+
+    @media (max-width: $md4+px) {
+      font-size: 15px;
+      line-height: 21px;
+    }
+  }
+
+  &_grade {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #8E97A6;
+    background: url("../images/main/restaurants/star.png") left no-repeat;
+    padding: 0 0 0 30px;
+
+    @media (max-width: $md4+px) {
+      font-size: 15px;
+      line-height: 21px;
+      background: url("../images/main/restaurants/star.png") left /21px no-repeat;
+      padding: 0 0 0 22px;
+    }
+  }
+
+  &_label {
+    background: #DBD9EE url("../images/main/restaurants/label.png") center no-repeat;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin: 0 4px 0 0;
+
+    @media (max-width: $md4+px) {
+      width: 32px;
+      height: 32px;
+      background: #DBD9EE url("../images/main/restaurants/label.png") center /12px no-repeat;
+    }
+  }
+
+  &_view {
+    text-align: right;
+    margin: 0 50px 0 0;
+    position: relative;
+    padding: 0 30px 0 0;
+
+    a {
+      cursor: pointer;
+      font-size: 20px;
+      line-height: 45px;
+      font-weight: 500;
+      font-family: Poppins, sans-serif;
+      color: #ACADB9;
+      transition: all 0.3s ease 0s;
+
+      @media (min-width: $md2+px) {
+        &:hover {
+          color: #6C5FBC;
+        }
+      }
+    }
+
+    &::before {
+      position: absolute;
+      top: 45%;
+      right: 0;
+      content: "";
+      display: inline-block;
+      width: 20px;
+      height: 3px;
+      background: url("../images/main/restaurants/arrow-02.png") 0 0 no-repeat;
+    }
+
+    &::after {
+      position: absolute;
+      top: 27%;
+      right: -3px;
+      content: "";
+      display: inline-block;
+      width: 12px;
+      height: 20px;
+      background: url("../images/main/restaurants/arrow-01.png") 0 0 no-repeat;
+    }
+
+    @media (max-width: $md4+px) {
+      margin: 0 0 0 0;
     }
   }
 }

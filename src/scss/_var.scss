@@ -45,6 +45,35 @@ a.text {
   //}
 }
 
+._title-banners {
+  color: #323142;
+  font-size: 45px;
+  line-height: 55px;
+  font-weight: 600;
+  font-family: Poppins, sans-serif;
+  text-align: center;
+  margin: 0 0 60px 0;
+
+  span {
+    font-size: 45px;
+    line-height: 26px;
+    font-weight: 600;
+    font-family: Poppins, sans-serif;
+    color: #6C5FBC;
+  }
+
+  @media (max-width: $md4+px) {
+    font-size: 30px;
+    line-height: 36px;
+    margin: 0 0 30px 0;
+
+    span {
+      font-size: 30px;
+      line-height: 36px;
+    }
+  }
+}
+
 .btn {
   font-family: Poppins, sans-serif;
   cursor: pointer;
