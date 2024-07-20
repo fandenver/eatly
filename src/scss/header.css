@@ -77,6 +77,21 @@ a.text {
   font-weight: 700;
   font-family: Poppins, sans-serif;
 }
+@media (max-width: 1100px) {
+  ._title-main {
+    font-size: 36px;
+    line-height: 42px;
+  }
+  ._title-main span {
+    font-size: 36px;
+    line-height: 42px;
+  }
+}
+@media (max-width: 991.98px) {
+  ._title-main {
+    text-align: center;
+  }
+}
 @media (max-width: 767.98px) {
   ._title-main {
     font-size: 30px;
