@@ -41,6 +41,22 @@ html, body {
       margin: 0 0 50px 0;
     }
   }
+
+  &_dishes {
+    margin: 0 0 100px 0;
+
+    @media (max-width: $md2+px) {
+      margin: 0 0 50px 0;
+    }
+  }
+
+  &_control {
+    margin: 0 0 100px 0;
+
+    @media (max-width: $md2+px) {
+      margin: 0 0 50px 0;
+    }
+  }
 }
 
 .grade-page {
@@ -352,39 +368,6 @@ html, body {
   }
 
   &_title {
-    margin: 0 0 50px 0;
-
-    p {
-      color: #000000;
-      white-space: nowrap;
-      font-size: 51px;
-      line-height: 58px;
-      font-weight: 700;
-      font-family: Poppins, sans-serif;
-
-      span {
-        color: #6C5FBC;
-        white-space: nowrap;
-        font-size: 51px;
-        line-height: 58px;
-        font-weight: 700;
-        font-family: Poppins, sans-serif;
-      }
-
-      @media (max-width: $md3+px) {
-        font-size: 30px;
-        line-height: 34px;
-
-        span {
-          font-size: 30px;
-          line-height: 34px;
-        }
-      }
-    }
-
-    @media (max-width: $md3+px) {
-      margin: 0 0 30px 0;
-    }
   }
 
   &_list {
@@ -471,23 +454,22 @@ html, body {
   }
 
   &_items {
+    margin: 0 -18px;
     display: flex;
 
-    @media (max-width: 1330px) {
+    @media (max-width: $md1+px) {
       flex-wrap: wrap;
       justify-content: space-around;
     }
   }
 
   &_item {
-    flex: 0 1 33.333%;
-    padding: 0 18px;
+    padding: 0 17px;
     margin: 0 0 40px 0;
 
-    @media (max-width: 1270px) {
+    @media (max-width: $md1+px) {
       display: flex;
       justify-content: center;
-      flex: 0 1 50%;
     }
 
     @media (max-width: $md4+px) {
@@ -495,22 +477,92 @@ html, body {
     }
   }
 
-  &_content {
-    width: 386px;
-    border-radius: 35px;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 4px 20px 0 #00000040;
-    padding: 0 0 15px 0;
+  &_image {
+    flex: 0 1 176px;
+  }
+
+  &_block {
+    width: 394px;
 
     @media (max-width: $md4+px) {
       width: 280px;
     }
   }
 
+  &_inscriptions {
+    padding: 0 35px;
+
+    @media (max-width: $md4+px) {
+      padding: 0 15px;
+    }
+  }
+}
+
+.view-page {
+  text-align: right;
+  margin: 0 50px 0 0;
+  position: relative;
+  padding: 0 30px 0 0;
+
+  a {
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 45px;
+    font-weight: 500;
+    font-family: Poppins, sans-serif;
+    color: #ACADB9;
+    transition: all 0.3s ease 0s;
+
+    @media (min-width: $md2+px) {
+      &:hover {
+        color: #6C5FBC;
+      }
+    }
+  }
+
+  &::before {
+    position: absolute;
+    top: 45%;
+    right: 0;
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 3px;
+    background: url("../images/main/restaurants/arrow-02.png") 0 0 no-repeat;
+  }
+
+  &::after {
+    position: absolute;
+    top: 27%;
+    right: -3px;
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 20px;
+    background: url("../images/main/restaurants/arrow-01.png") 0 0 no-repeat;
+  }
+
+  @media (max-width: $md4+px) {
+    margin: 0 0 0 0;
+  }
+}
+
+.product-item {
+
+  @media (max-width: $md4+px) {
+    padding: 0 0;
+  }
+
+  &_content {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 20px 0 #00000040;
+    padding: 0 0 15px 0;
+    border-radius: 35px;
+  }
+
   &_image {
     position: relative;
-    flex: 0 1 176px;
     margin: 0 0 15px 0;
 
     @media (max-width: $md4+px) {
@@ -521,16 +573,15 @@ html, body {
       position: absolute;
       max-width: 100%;
     }
+
+    &_size {
+      flex: 0 1 230px;
+    }
   }
 
   &_inscriptions {
     display: flex;
     flex-direction: column;
-    padding: 0 35px;
-
-    @media (max-width: $md4+px) {
-      padding: 0 15px;
-    }
   }
 
   &_status {
@@ -552,9 +603,17 @@ html, body {
     &_red {
 
       span {
-        flex: 0 1 52px;
+        flex: 0 1 70px;
         color: #FB471D;
         background-color: rgba(246, 55, 7, 0.2);
+      }
+    }
+
+    &_green {
+
+      span {
+        color: #309D5B;
+        background-color: rgba(13, 234, 101, 0.2);
       }
     }
 
@@ -569,7 +628,7 @@ html, body {
   &_title {
     color: #323142;
     font-family: Poppins, sans-serif;
-    font-size: 26px;
+    font-size: 185%;
     line-height: 42px;
     font-weight: 600;
 
@@ -633,52 +692,212 @@ html, body {
     }
   }
 
-  &_view {
-    text-align: right;
-    margin: 0 50px 0 0;
-    position: relative;
-    padding: 0 30px 0 0;
+  &_buy {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    a {
+    img {
+      max-width: 44px;
+      max-height: 39px;
       cursor: pointer;
-      font-size: 20px;
-      line-height: 45px;
-      font-weight: 500;
-      font-family: Poppins, sans-serif;
-      color: #ACADB9;
-      transition: all 0.3s ease 0s;
-
-      @media (min-width: $md2+px) {
-        &:hover {
-          color: #6C5FBC;
-        }
-      }
     }
+  }
+
+  &_price {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 41px;
+    color: #323142;
+    align-self: flex-end;
+
+    span {
+      color: #8E97A6;
+      font-size: 19px;
+    }
+  }
+}
+
+.dishes-page {
+
+  &_sub-container {
+    padding: 0 0 100px 0;
+    border-bottom: 1px solid #CBCBCB;
+  }
+
+  &_items {
+    display: flex;
+    margin: 0 -15px;
+
+    @media (max-width: $md1+px) {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  }
+
+  &_item {
+    padding: 0 15px;
+    margin: 0 0 40px 0;
+
+    @media (max-width: $md4+px) {
+      padding: 0 0;
+    }
+  }
+
+  &_block {
+    width: 225px;
+    position: relative;
 
     &::before {
       position: absolute;
-      top: 45%;
-      right: 0;
+      cursor: pointer;
+      top: 5%;
+      right: 5%;
       content: "";
-      display: inline-block;
-      width: 20px;
-      height: 3px;
-      background: url("../images/main/restaurants/arrow-02.png") 0 0 no-repeat;
+      width: 22px;
+      height: 18px;
+      background: url("../images/main/dishes/heart.png") center no-repeat;
     }
+  }
 
-    &::after {
-      position: absolute;
-      top: 27%;
-      right: -3px;
-      content: "";
-      display: inline-block;
-      width: 12px;
-      height: 20px;
-      background: url("../images/main/restaurants/arrow-01.png") 0 0 no-repeat;
+  &_content {
+    padding: 15px 0 15px 0;
+  }
+
+  &_image {
+    display: flex;
+    justify-content: center;
+    flex: 0 1 210px;
+    margin: 0 0 0 0;
+
+    img {
     }
+  }
+
+  &_title {
+    font-size: 23px;
+    line-height: 37px;
+    font-weight: 600;
+    font-family: Poppins, sans-serif;
+    color: #323142;
+    margin: 0 0 10px 0;
+  }
+
+  &_info {
+    flex-direction: column;
+  }
+
+  &_grades {
+    display: flex;
+    flex: 0 1 25px;
+    margin: 0 0 10px 0;
+    max-width: 150px;
+  }
+
+  &_inscriptions {
+    padding: 0 15px;
+  }
+
+  &_time {
+    font-size: 17px;
+    line-height: 23px;
+    font-weight: 400;
+    color: #8E97A6;
+    margin: 0 10px 0 0;
+  }
+
+  &_grade {
+    font-size: 17px;
+    line-height: 23px;
+    font-weight: 400;
+    color: #8E97A6;
+    background: url("../images/main/restaurants/star.png") left -4px no-repeat;
+    padding: 0 0 0 30px;
 
     @media (max-width: $md4+px) {
-      margin: 0 0 0 0;
+      font-size: 15px;
+      line-height: 21px;
+      background: url("../images/main/restaurants/star.png") left /21px no-repeat;
+      padding: 0 0 0 22px;
+    }
+  }
+}
+
+.control-page {
+
+  &_container {
+    display: flex;
+  }
+
+  &_column {
+    flex: 0 1 50%;
+  }
+
+  &_title {
+  }
+
+  &_menu {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &_item {
+    display: flex;
+    margin: 0 0 20px 0;
+  }
+
+  &_product {
+    display: flex;
+    padding: 5px 15px 0 15px;
+    align-items: center;
+    box-shadow: 0 4px 20px 0 #00000040;
+    flex: 0 0 345px;
+    border-radius: 15px;
+  }
+
+  &_image {
+    flex: 0 0 80px;
+    margin: 0 20px 0 0;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &_content {
+    flex: 1 1 auto;
+  }
+
+  &_sub-title {
+    font-family: Poppins, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 27px;
+    color: #000000;
+  }
+
+  &_sub-content {
+    font-family: Poppins, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 17px;
+
+    &_red {
+      color: #F1534E;
+    }
+  }
+
+  &_time {
+    flex: 0 0 60px;
+    display: flex;
+    align-self: flex-end;
+    padding: 0 0 10px 0;
+
+    span {
+      font-family: Poppins, sans-serif;
+      font-size: 13.04px;
+      font-weight: 500;
+      line-height: 18.26px;
     }
   }
 }

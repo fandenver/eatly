@@ -74,6 +74,37 @@ a.text {
   }
 }
 
+._title-main {
+  color: #000000;
+  max-width: 500px;
+  text-align: left;
+  font-size: 51px;
+  line-height: 58px;
+  font-weight: 700;
+  font-family: Poppins, sans-serif;
+  margin: 0 0 50px 0;
+
+  span {
+    color: #6C5FBC;
+    white-space: nowrap;
+    font-size: 51px;
+    line-height: 58px;
+    font-weight: 700;
+    font-family: Poppins, sans-serif;
+  }
+
+  @media (max-width: $md3+px) {
+    font-size: 30px;
+    line-height: 34px;
+    margin: 0 0 30px 0;
+
+    span {
+      font-size: 30px;
+      line-height: 34px;
+    }
+  }
+}
+
 .btn {
   font-family: Poppins, sans-serif;
   cursor: pointer;
