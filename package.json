@@ -20,7 +20,8 @@
     "gulp-notify": "^4.0.0",
     "gulp-plumber": "^1.2.1",
     "gulp-version-number": "^0.2.4",
-    "gulp-webp-html-nosvg": "^1.1.1"
+    "gulp-webp-html-nosvg": "^1.1.1",
+    "swiper": "^11.1.5"
   },
   "devDependencies": {
     "gulp-replace": "^1.1.4"

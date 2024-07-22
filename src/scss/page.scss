@@ -6,7 +6,11 @@ html, body {
 }
 
 .header {
-  margin: 0 0 50px 0;
+  margin: 0 0 100px 0;
+
+  @media (max-width: $md2+px) {
+    margin: 0 0 50px 0;
+  }
 }
 
 .page {
@@ -51,6 +55,14 @@ html, body {
   }
 
   &_control {
+    margin: 0 0 100px 0;
+
+    @media (max-width: $md2+px) {
+      margin: 0 0 50px 0;
+    }
+  }
+
+  &_customer {
     margin: 0 0 100px 0;
 
     @media (max-width: $md2+px) {
@@ -466,6 +478,10 @@ html, body {
   &_block {
     width: 394px;
 
+    @media (max-width: 520px) {
+      margin: 0 auto;
+    }
+
     @media (max-width: $md4+px) {
       width: 280px;
     }
@@ -545,8 +561,8 @@ html, body {
     padding: 0 15px;
     margin: 0 0 40px 0;
 
-    @media (max-width: $md4+px) {
-      padding: 0 0;
+    @media (max-width: 520px) {
+      flex: 0 1 100%;
     }
   }
 
@@ -771,6 +787,10 @@ html, body {
       width: 22px;
       height: 18px;
       background: url("../images/main/dishes/heart.png") center no-repeat;
+    }
+
+    @media (max-width: 520px) {
+      width: 100%;
     }
   }
 
@@ -1150,6 +1170,142 @@ html, body {
 
     @media (max-width: $md3+px) {
       height: 6px;
+    }
+  }
+}
+
+.customer-page {
+
+  &_container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &_body {
+    position: relative;
+  }
+
+  &_scroll {
+    z-index: 2;
+    top: 97%;
+    left: 50%;
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 9px;
+    background-color: #F4F0FF;
+    border-radius: 78px;
+
+    & > .swiper-scrollbar-drag {
+      border-radius: 78px;
+      width: 20%;
+      height: 9px;
+      background-color: #6C5FBC;
+    }
+
+    @media (max-width: $md2+px) {
+      top: 115%;
+      width: 90%;
+      left: 5%;
+    }
+  }
+
+  &_slide {
+    box-shadow: 0 4px 20px 0 #00000040;
+    padding: 35px 40px;
+    border-radius: 25px;
+
+    @media (max-width: $md4+px) {
+      padding: 15px 20px;
+
+    }
+  }
+
+  &_person {
+    display: flex;
+    margin: 0 0 35px 0;
+    align-items: center;
+
+    @media (max-width: $md4+px) {
+      margin: 0 0 15px 0;
+    }
+  }
+
+  &_photo {
+    margin: 0 15px 0 0;
+
+    @media (max-width: $md4+px) {
+      margin: 0 10px 0 0;
+      flex: 0 1 42px;
+
+      img {
+        max-width: 100%
+      }
+    }
+  }
+
+  &_name {
+    flex: 1 1 auto;
+
+    p {
+      font-family: Poppins, sans-serif;
+      font-size: 17px;
+      line-height: 26px;
+      font-weight: 500;
+      flex: 1 1 auto;
+      color: #5E5D5D;
+
+      span {
+        font-size: 21px;
+        line-height: 31px;
+        color: #030314;
+        font-weight: 500;
+      }
+
+      @media (max-width: $md4+px) {
+        font-size: 10px;
+        line-height: 16px;
+
+        span {
+          font-size: 14px;
+          line-height: 18px;
+        }
+      }
+    }
+  }
+
+  &_commas {
+    flex: 0 1 59px;
+
+    @media (max-width: $md4+px) {
+      flex: 0 1 35px;
+
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &_review {
+    margin: 0 0 35px 0;
+    font-family: Poppins, sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 26px;
+
+    @media (max-width: $md4+px) {
+      font-size: 11px;
+      line-height: 16px;
+      margin: 0 0 15px 0;
+    }
+  }
+
+  &_grade {
+    max-width: 82px;
+
+    img {
+      max-width: 100%;
     }
   }
 }
