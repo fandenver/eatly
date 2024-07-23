@@ -1,0 +1,146 @@
+@import "var";
+
+.footer {
+  background-color: #EAEAEA;
+
+  &_content {
+    display: flex;
+    flex-direction: column;
+    padding: 80px 0;
+
+    @media (max-width: $md2+px) {
+      padding: 50px 0 40px 0;
+    }
+  }
+
+  &_menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(32, 31, 31, 0.2);
+    padding: 0 0 25px 0;
+
+    @media (max-width: $md2+px) {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0 0 30px 0;
+    }
+  }
+
+  &_label {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: $md2+px) {
+      margin: 0 0 50px 0;
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+
+  &_logo {
+    @media (max-width: $md4+px) {
+      flex: 0 1 100px;
+
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &_items {
+    display: flex;
+    justify-content: flex-end;
+
+    li {
+      margin: 0 70px 0 0;
+
+      a {
+        color: #999999;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 27px;
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+
+        @media (min-width: $md2+px) {
+          &:hover {
+            color: #6C5FBC;;
+          }
+        }
+
+        @media (max-width: $md2+px) {
+          color: #606060;
+        }
+
+        @media (max-width: $md4+px) {
+          font-size: 14px;
+          line-height: 19px;
+        }
+      }
+
+      &:last-child {
+        margin: 0 0 0 0;
+      }
+
+      @media (max-width: $md2+px) {
+        margin: 0 0 30px 0;
+      }
+    }
+
+    @media (max-width: $md2+px) {
+      flex-direction: column;
+    }
+  }
+
+  &_info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 0 0 0;
+
+    @media (max-width: $md2+px) {
+      justify-content: center;
+      padding: 30px 0 0 0;
+    }
+  }
+
+  &_date {
+    color: #999999;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 25px;
+
+    @media (max-width: $md4+px) {
+      font-size: 14px;
+      line-height: 20px;
+      color: #70798B;
+    }
+  }
+
+  &_socials {
+
+    &._socials-up {
+      display: none;
+
+      @media (max-width: $md2+px) {
+        display: inline-block;
+
+        img {
+          max-width: 100%;
+        }
+      }
+
+      @media (max-width: $md4+px) {
+        flex: 0 1 115px;
+      }
+    }
+
+    &._socials-down {
+
+      @media (max-width: $md2+px) {
+        display: none;
+      }
+    }
+  }
+}

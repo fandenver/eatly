@@ -63,10 +63,22 @@ html, body {
   }
 
   &_customer {
-    margin: 0 0 100px 0;
+    margin: 0 0 200px 0;
 
     @media (max-width: $md2+px) {
-      margin: 0 0 50px 0;
+      margin: 0 0 150px 0;
+    }
+  }
+
+  &_get-sale {
+    margin: 0 0 150px 0;
+
+    @media (max-width: $md2+px) {
+      margin: 0 0 250px 0;
+    }
+
+    @media (max-width: $md4+px) {
+      margin: 0 0 200px 0;
     }
   }
 }
@@ -224,7 +236,6 @@ html, body {
 
   &_started {
     flex: 0 1 156px;
-    background-color: #6C5FBC;
     border-radius: 12px;
     color: #FFFFFF;
     padding: 17px 0;
@@ -408,8 +419,6 @@ html, body {
 
   &_button {
     width: 186px;
-    color: #FFFFFF;
-    background-color: #6C5FBC;
     position: relative;
 
     span {
@@ -1306,6 +1315,145 @@ html, body {
 
     img {
       max-width: 100%;
+    }
+  }
+}
+
+.sale-get-page {
+
+  &_content {
+    background-color: #6C5FBC;
+    border-radius: 30px;
+    padding: 50px 60px 70px 60px;
+    position: relative;
+
+    @media (max-width: $md2+px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @media (max-width: $md4+px) {
+      padding: 50px 20px 70px 20px;
+    }
+  }
+
+  &_form {
+    display: flex;
+    flex-direction: column;
+    max-width: 440px;
+
+    @media (max-width: $md2+px) {
+      max-width: 100%;
+      flex: 1 1 100%;
+    }
+  }
+
+  &_header {
+    color: rgba(255, 255, 255, 0.8);
+    font-family: Poppins, sans-serif;
+    font-size: 70px;
+    font-weight: 800;
+    line-height: 96px;
+
+    @media (max-width: $md2+px) {
+      text-align: center;
+    }
+
+    @media (max-width: $md3+px) {
+      font-size: 41px;
+      line-height: 62px;
+    }
+  }
+
+  &_body {
+    position: relative;
+
+    & button {
+      @media (max-width: $md3+px) {
+        font-size: 10px;
+        line-height: 15px;
+        padding: 10px 15px;
+      }
+    }
+  }
+
+  &_input {
+
+    input {
+      padding: 20px 20px;
+      border-radius: 15px;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.8);
+      color: #878787;
+      font-family: Poppins, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0.03em;
+
+      &::placeholder {
+        color: #878787;
+        font-family: Poppins, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0.03em;
+      }
+
+      @media (max-width: $md3+px) {
+        padding: 15px 15px;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16px;
+        height: 48px;
+
+        &::placeholder {
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 16px;
+          content: "Email Address";
+        }
+      }
+    }
+  }
+
+  &_button {
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    text-transform: uppercase;
+    font-size: 14.75px;
+    font-weight: 500;
+    line-height: 22.13px;
+    letter-spacing: 0.03em;
+    padding: 15px 25px;
+    border-radius: 12px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  &_image {
+    position: absolute;
+    bottom: -30%;
+    right: 7%;
+
+    @media (max-width: $md2+px) {
+      top: 35%;
+      right: 46%;
+      transform: translate(50%, 50%);
+
+      img {
+        max-width: 90%;
+      }
+    }
+
+    @media (max-width: $md4+px) {
+      top: 35%;
+      right: 50%;
+
+      img {
+        max-width: 100%;
+      }
     }
   }
 }

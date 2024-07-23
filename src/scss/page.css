@@ -17,6 +17,10 @@ a.text {
   text-decoration: none;
 }
 
+input {
+  outline: none;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -104,7 +108,7 @@ a.text {
   }
 }
 
-.btn {
+.btn-white {
   font-family: Poppins, sans-serif;
   cursor: pointer;
   display: inline-flex;
@@ -118,8 +122,29 @@ a.text {
   border-radius: 15px;
 }
 @media (min-width: 991.98px) {
-  .btn:hover {
+  .btn-white:hover {
     box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2509803922);
+  }
+}
+
+.btn-blue {
+  background-color: #6C5FBC;
+  font-family: Poppins, sans-serif;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  white-space: nowrap;
+  transition: all 0.3s ease 0s;
+  border-radius: 15px;
+  color: #FFFFFF;
+}
+@media (min-width: 991.98px) {
+  .btn-blue:hover {
+    background-color: #4839b9;
   }
 }
 
@@ -186,11 +211,24 @@ html, body {
   }
 }
 .page_customer {
-  margin: 0 0 100px 0;
+  margin: 0 0 200px 0;
 }
 @media (max-width: 991.98px) {
   .page_customer {
-    margin: 0 0 50px 0;
+    margin: 0 0 150px 0;
+  }
+}
+.page_get-sale {
+  margin: 0 0 150px 0;
+}
+@media (max-width: 991.98px) {
+  .page_get-sale {
+    margin: 0 0 250px 0;
+  }
+}
+@media (max-width: 479.98px) {
+  .page_get-sale {
+    margin: 0 0 200px 0;
   }
 }
 
@@ -342,7 +380,6 @@ html, body {
 }
 .grade-page_started {
   flex: 0 1 156px;
-  background-color: #6C5FBC;
   border-radius: 12px;
   color: #FFFFFF;
   padding: 17px 0;
@@ -509,8 +546,6 @@ html, body {
 }
 .mobile-phone_button {
   width: 186px;
-  color: #FFFFFF;
-  background-color: #6C5FBC;
   position: relative;
 }
 .mobile-phone_button span {
@@ -1310,6 +1345,136 @@ html, body {
 }
 .customer-page_grade img {
   max-width: 100%;
+}
+
+.sale-get-page_content {
+  background-color: #6C5FBC;
+  border-radius: 30px;
+  padding: 50px 60px 70px 60px;
+  position: relative;
+}
+@media (max-width: 991.98px) {
+  .sale-get-page_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 479.98px) {
+  .sale-get-page_content {
+    padding: 50px 20px 70px 20px;
+  }
+}
+.sale-get-page_form {
+  display: flex;
+  flex-direction: column;
+  max-width: 440px;
+}
+@media (max-width: 991.98px) {
+  .sale-get-page_form {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+}
+.sale-get-page_header {
+  color: rgba(255, 255, 255, 0.8);
+  font-family: Poppins, sans-serif;
+  font-size: 70px;
+  font-weight: 800;
+  line-height: 96px;
+}
+@media (max-width: 991.98px) {
+  .sale-get-page_header {
+    text-align: center;
+  }
+}
+@media (max-width: 767.98px) {
+  .sale-get-page_header {
+    font-size: 41px;
+    line-height: 62px;
+  }
+}
+.sale-get-page_body {
+  position: relative;
+}
+@media (max-width: 767.98px) {
+  .sale-get-page_body button {
+    font-size: 10px;
+    line-height: 15px;
+    padding: 10px 15px;
+  }
+}
+.sale-get-page_input input {
+  padding: 20px 20px;
+  border-radius: 15px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #878787;
+  font-family: Poppins, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+}
+.sale-get-page_input input::placeholder {
+  color: #878787;
+  font-family: Poppins, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+}
+@media (max-width: 767.98px) {
+  .sale-get-page_input input {
+    padding: 15px 15px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    height: 48px;
+  }
+  .sale-get-page_input input::placeholder {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    content: "Email Address";
+  }
+}
+.sale-get-page_button {
+  position: absolute;
+  right: 6px;
+  top: 6px;
+  text-transform: uppercase;
+  font-size: 14.75px;
+  font-weight: 500;
+  line-height: 22.13px;
+  letter-spacing: 0.03em;
+  padding: 15px 25px;
+  border-radius: 12px;
+  color: rgba(255, 255, 255, 0.8);
+}
+.sale-get-page_image {
+  position: absolute;
+  bottom: -30%;
+  right: 7%;
+}
+@media (max-width: 991.98px) {
+  .sale-get-page_image {
+    top: 35%;
+    right: 46%;
+    transform: translate(50%, 50%);
+  }
+  .sale-get-page_image img {
+    max-width: 90%;
+  }
+}
+@media (max-width: 479.98px) {
+  .sale-get-page_image {
+    top: 35%;
+    right: 50%;
+  }
+  .sale-get-page_image img {
+    max-width: 100%;
+  }
 }
 
 /*# sourceMappingURL=page.css.map */
