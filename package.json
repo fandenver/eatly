@@ -21,6 +21,7 @@
     "gulp-plumber": "^1.2.1",
     "gulp-version-number": "^0.2.4",
     "gulp-webp-html-nosvg": "^1.1.1",
+    "nouislider": "^15.8.1",
     "swiper": "^11.1.5"
   },
   "devDependencies": {

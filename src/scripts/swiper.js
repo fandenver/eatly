@@ -49,3 +49,19 @@ if (document.querySelector('.customer-page_body')) {
         }
     });
 }
+
+if (document.querySelector('.filter-page_sale-container')) {
+    let bannerSlider = new Swiper('.sale-get-page_container', {
+        observer: true,
+        observeParents: true,
+        spaceBetween: 55,
+        slidesPerView: 1,
+        speed: 800,
+        loop: false,
+        pagination: {
+            el: '.filter-page_dots',
+            clickable: true,
+            dynamicBullets: true,
+        }
+    });
+}

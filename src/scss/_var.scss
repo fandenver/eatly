@@ -27,7 +27,7 @@ a.text {
   text-decoration: none;
 }
 
-input{
+input {
   outline: none;
 }
 
@@ -157,6 +157,23 @@ input{
   transition: all 0.3s ease 0s;
   border-radius: 15px;
   color: #FFFFFF;
+
+  @media (min-width: $md2+px) {
+    &:hover {
+      background-color: #4839b9;
+    }
+  }
+}
+
+.btn-submit {
+  cursor: pointer;
+  background-color: #6C5FBC;
+  color: #FFF3EB;
+  font-family: Poppins, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+  border-radius: 15px;
 
   @media (min-width: $md2+px) {
     &:hover {

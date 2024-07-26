@@ -81,6 +81,14 @@ html, body {
       margin: 0 0 200px 0;
     }
   }
+
+  &_filter {
+    margin: 0 0 150px 0;
+
+    @media (max-width: $md2+px) {
+      margin: 0 0 100px 0;
+    }
+  }
 }
 
 .grade-page {
@@ -1320,6 +1328,13 @@ html, body {
 }
 
 .sale-get-page {
+  overflow: hidden;
+  min-height: 360px;
+
+  &_slider {
+    margin: 0 0 52px 0;
+    max-width: 790px;
+  }
 
   &_content {
     background-color: #6C5FBC;
@@ -1356,13 +1371,30 @@ html, body {
     font-weight: 800;
     line-height: 96px;
 
+    span {
+      color: #F7F8FA;
+      font-family: Poppins, sans-serif;
+      font-size: 70px;
+      font-weight: 800;
+      line-height: 96px;
+    }
+
     @media (max-width: $md2+px) {
       text-align: center;
+
+      span {
+        text-align: center;
+      }
     }
 
     @media (max-width: $md3+px) {
       font-size: 41px;
       line-height: 62px;
+
+      span {
+        font-size: 41px;
+        line-height: 62px;
+      }
     }
   }
 
@@ -1455,5 +1487,13 @@ html, body {
         max-width: 100%;
       }
     }
+  }
+
+  &_text {
+    color: rgba(247, 248, 250, 0.3);
+    font-family: Poppins, sans-serif;
+    font-size: 87px;
+    font-weight: 800;
+    line-height: 46px;
   }
 }

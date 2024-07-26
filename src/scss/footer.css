@@ -148,6 +148,22 @@ input {
   }
 }
 
+.btn-submit {
+  cursor: pointer;
+  background-color: #6C5FBC;
+  color: #FFF3EB;
+  font-family: Poppins, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+  border-radius: 15px;
+}
+@media (min-width: 991.98px) {
+  .btn-submit:hover {
+    background-color: #4839b9;
+  }
+}
+
 .footer {
   background-color: #EAEAEA;
 }
