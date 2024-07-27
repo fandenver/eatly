@@ -1328,12 +1328,14 @@ html, body {
 }
 
 .sale-get-page {
-  overflow: hidden;
-  min-height: 360px;
 
   &_slider {
-    margin: 0 0 52px 0;
-    max-width: 790px;
+    margin: 0 0 90px 0;
+    position: relative;
+
+    @media (max-width: $md2+px) {
+      margin: 0 0 225px 0;
+    }
   }
 
   &_content {
@@ -1494,6 +1496,19 @@ html, body {
     font-family: Poppins, sans-serif;
     font-size: 87px;
     font-weight: 800;
-    line-height: 46px;
+    line-height: 64px;
+
+    @media (max-width: $md1+px) and (min-width: $md2+px) {
+      font-size: 70px;
+    }
+
+    @media (max-width: $md2+px) {
+      text-align: center;
+    }
+
+    @media (max-width: $md3+px) {
+      font-size: 41px;
+      line-height: 62px;
+    }
   }
 }
