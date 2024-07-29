@@ -51,7 +51,7 @@ if (document.querySelector('.customer-page_body')) {
 }
 
 if (document.querySelector('.filter-page_sale-container')) {
-    let bannerSlider = new Swiper('.sale-get-page_slider', {
+    let bannerSlider = new Swiper('._sale-get-page-slider', {
         observer: true,
         observeParents: true,
         spaceBetween: 55,
