@@ -77,6 +77,12 @@ input {
   line-height: 26px;
   color: #6C5FBC;
 }
+@media (max-width: 991.98px) {
+  ._title-left-banners {
+    text-align: center;
+    margin: 0 0 60px 0;
+  }
+}
 @media (max-width: 479.98px) {
   ._title-left-banners {
     font-size: 30px;
@@ -288,6 +294,7 @@ input {
   top: 0;
   right: 100%;
   animation: fadeIn 0.4s ease-in-out;
+  z-index: 500;
 }
 .header_menu-container._active {
   display: block;

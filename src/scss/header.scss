@@ -122,6 +122,7 @@
     top: 0;
     right: 100%;
     animation: fadeIn 0.4s ease-in-out;
+    z-index: 500;
 
     &._active {
       display: block;
