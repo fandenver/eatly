@@ -13,7 +13,7 @@ export const path = {
         html: `${srcFolder}/*.html`
     },
     watch : {
-        html: `${srcFolder}/*.html`
+        html: `${srcFolder}/**/*.html`
     },
     clean: `${buildFolder}/html/`,
     buildFolder: buildFolder,
