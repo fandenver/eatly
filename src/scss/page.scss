@@ -310,7 +310,15 @@ html, body {
     margin: 0 0 615px 0;
 
     @media (max-width: $md2+px) {
-      margin: 0 0 615px 0;
+      margin: 0 0 400px 0;
+    }
+
+    @media (max-width: $md3+px) {
+      margin: 0 0 350px 0;
+    }
+
+    @media (max-width: 400px) {
+      margin: 0 0 280px 0;
     }
   }
 
