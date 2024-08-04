@@ -7,15 +7,18 @@ const srcFolder = './src';
 
 export const path = {
     build: {
+        js: `${buildFolder}/scripts/`,
         html: `${buildFolder}/html/`
     },
     src: {
+        js: `${srcFolder}/scripts/*.js`,
         html: `${srcFolder}/*.html`
     },
     watch : {
-        html: `${srcFolder}/**/*.html`
+        html: `${srcFolder}/**/*.html`,
+        js: `${srcFolder}/**/*.js`
     },
-    clean: `${buildFolder}/html/`,
+    clean: `${buildFolder}`,
     buildFolder: buildFolder,
     srcFolder: srcFolder,
     rootFolder: rootFolder,

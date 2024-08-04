@@ -1,112 +1,54 @@
 const hiddenColumns = document.querySelectorAll('.tariff-page_column._column-hidden');
 const contestsColumns = document.querySelectorAll('.tariff-page_column._column-contests');
-const firstColumns = document.querySelectorAll('.tariff-page_column._first-column');
-const secondColumns = document.querySelectorAll('.tariff-page_column._second-column');
 const hiddenItems = document.querySelectorAll('.tariff-page_item._item-hidden');
-const hiddenTitle = document.querySelector('.tariff-page_title._title-hidden');
 const orderTitles = document.querySelectorAll('.tariff-page_title._title-order');
 const orderPrices = document.querySelectorAll('.tariff-page_price._price-order');
 const orderBodes = document.querySelectorAll('.tariff-page_body._body-order');
 const orderFooters = document.querySelectorAll('.tariff-page_footer._footer-order');
 const orderDescriptions = document.querySelectorAll('.tariff-page_description._description-order');
+const hiddenTitle = document.querySelector('.tariff-page_title._title-hidden');
 const hiddenDescription = document.querySelector('.tariff-page_description._description-hidden');
-const windowWidth = window.innerWidth;
+const firstColumn = document.querySelector('.tariff-page_column._first-column');
+const secondColumn = document.querySelector('.tariff-page_column._second-column');
 
-hiddenColumns.forEach((hiddenColumn) => {
+changeClass = () => {
+    const windowWidth = window.innerWidth;
+    const isSmallScreen = windowWidth < 992;
 
-    if(windowWidth < 992) {
-        hiddenColumn.classList.add('_column-hidden');
-        hiddenColumn.classList.add('_column-contests');
+    function toggleClass(elements, className, condition) {
+        elements.forEach((element) => {
+            condition ?
+                element.classList.add(className) :
+                element.classList.remove(className);
+        });
+    }
+
+    toggleClass(hiddenColumns, '_column-hidden', isSmallScreen);
+    toggleClass(contestsColumns, '_column-contests', isSmallScreen);
+    toggleClass(hiddenItems, '_item-hidden', isSmallScreen);
+    toggleClass(orderTitles, '_title-order', isSmallScreen);
+    toggleClass(orderPrices, '_price-order', isSmallScreen);
+    toggleClass(orderBodes, '_body-order', isSmallScreen);
+    toggleClass(orderFooters, '_footer-order', isSmallScreen);
+    toggleClass(orderDescriptions, '_description-order', isSmallScreen);
+
+    if (isSmallScreen) {
         hiddenTitle.classList.add('_title-hidden');
         hiddenDescription.classList.add('_description-hidden');
-
-        console.log('123')
-    } else {
-        hiddenColumn.classList.remove('_column-hidden');
-        hiddenColumn.classList.remove('_column-contests');
-        hiddenTitle.classList.remove('_title-hidden');
-        hiddenDescription.classList.remove('_description-hidden');
-        console.log('321')
-    }
-})
-
-hiddenItems.forEach((hiddenItem) => {
-
-    if(windowWidth < 992) {
-        hiddenItem.classList.add('_item-hidden');
-    } else {
-        hiddenItem.classList.remove('_item-hidden');
-    }
-})
-
-orderTitles.forEach((orderTitle) => {
-
-    if(windowWidth < 992) {
-        orderTitle.classList.add('_title-order');
-    } else {
-        orderTitle.classList.remove('_title-order');
-    }
-})
-
-orderDescriptions.forEach((orderDescription) => {
-
-    if(windowWidth < 992) {
-        orderDescription.classList.add('_description-order');
-    } else {
-        orderDescription.classList.remove('_description-order');
-    }
-})
-
-orderPrices.forEach((orderPrice) => {
-
-    if(windowWidth < 992) {
-        orderPrice.classList.add('_price-order');
-    } else {
-        orderPrice.classList.remove('_price-order');
-    }
-})
-
-orderBodes.forEach((orderBody) => {
-
-    if(windowWidth < 992) {
-        orderBody.classList.add('_body-order');
-    } else {
-        orderBody.classList.remove('_body-order');
-    }
-})
-
-orderFooters.forEach((orderFooter) => {
-
-    if(windowWidth < 992) {
-        orderFooter.classList.add('_footer-order');
-    } else {
-        orderFooter.classList.remove('_footer-order');
-    }
-})
-
-contestsColumns.forEach((contestsColumn) => {
-
-    if(windowWidth < 992) {
-        contestsColumn.classList.add('_column-contests');
-    } else {
-        contestsColumn.classList.remove('_column-contests');
-    }
-})
-
-firstColumns.forEach((firstColumn) => {
-
-    if(windowWidth < 992) {
         firstColumn.classList.add('_first-column');
-    } else {
-        firstColumn.classList.remove('_first-column');
-    }
-})
-
-secondColumns.forEach((secondColumn) => {
-
-    if(windowWidth < 992) {
         secondColumn.classList.add('_second-column');
     } else {
+        hiddenTitle.classList.remove('_title-hidden');
+        hiddenDescription.classList.remove('_description-hidden');
+        firstColumn.classList.remove('_first-column');
         secondColumn.classList.remove('_second-column');
     }
-})
+}
+
+window.addEventListener('load', () => {
+    changeClass();
+});
+
+window.addEventListener('resize', () => {
+    changeClass();
+});

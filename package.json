@@ -14,7 +14,6 @@
     "browser-sync": "^3.0.2",
     "del": "^7.1.0",
     "gulp": "^5.0.0",
-    "gulp-file-include": "^2.3.0",
     "gulp-if": "^3.0.0",
     "gulp-newer": "^1.4.0",
     "gulp-notify": "^4.0.0",
@@ -22,9 +21,11 @@
     "gulp-version-number": "^0.2.4",
     "gulp-webp-html-nosvg": "^1.1.1",
     "nouislider": "^15.8.1",
-    "swiper": "^11.1.5"
+    "swiper": "^11.1.5",
+    "webpack-stream": "^7.0.0"
   },
   "devDependencies": {
+    "gulp-file-include": "^2.3.0",
     "gulp-replace": "^1.1.4"
   }
 }
