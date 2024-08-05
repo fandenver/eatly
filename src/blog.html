@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="scss/page.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+<body>
+<div class="wrapper">
+    @@include('html/header.html', {})
+    <main class="page">
+        <div class="page_order-food order-food-page">
+            <div class="order-food-page_container _container">
+                <div class="order-food-page_content">
+                    <div class="order-food-page_header">
+                        <h1 class="order-food-page_main-title">How To Order Food On eatly ?</h1>
+                        <div class="order-food-page_written-by">
+                            <div class="order-food-page_icon">
+                                <img src="images/blog/icon.png" alt="icon">
+                            </div>
+                            <div class="order-food-page_description">
+                                <div class="order-food-page_written">Written By</div>
+                                <div class="order-food-page_person">Perperzon</div>
+                            </div>
+                        </div>
+                        <div class="order-food-page_image">
+                            <img src="images/blog/banner.png" alt="banner">
+                        </div>
+                    </div>
+                    <div class="order-food-page_body">
+                        <article class="order-food-page_article">
+                            <h2 class="order-food-page_title">Browse restaurants and menus</h2>
+                            <div class="order-food-page_text">
+                                <p>
+                                    Once you're logged in, you can browse through the list of available restaurants on
+                                    the Eatly website. You can filter by cuisine, price, and distance to find the
+                                    perfect restaurant for your needs. Click on a restaurant to view its menu.
+                                    Once you're logged in, you can browse through the list of available restaurants on
+                                    the Eatly website. You can filter by cuisine, price, and distance.
+                                </p>
+                                <ul>
+                                    <li>It was popularized in the 1960s with the release</li>
+                                    <li>Lorem Ipsum passages, and more recently </li>
+                                </ul>
+                            </div>
+                        </article>
+                        <article class="order-food-page_article">
+                            <h2 class="order-food-page_title">Select your items</h2>
+                            <div class="order-food-page_text">
+                                <p>
+                                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
+                                    in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                                    Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked
+                                    up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage,
+                                    and going through the cites of the word in classical literature, discovered the
+                                    undoubtable source.
+                                </p>
+                            </div>
+                        </article>
+                        <article class="order-food-page_article">
+                            <h2 class="order-food-page_title">Place your order</h2>
+                            <div class="order-food-page_text">
+                                <p>
+                                    Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et
+                                    Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book
+                                    is a treatise on the theory of ethics, very popular during the Renaissance.
+                                </p>
+                            </div>
+                        </article>
+                        <button class="order-food-page_btn btn-blue"><span>Next article</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    @@include('html/footer.html', {})
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="scripts/scripts.min.js"></script>
+</div>
+</body>
+</html>

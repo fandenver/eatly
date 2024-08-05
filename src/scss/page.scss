@@ -3,6 +3,7 @@
 @import "header";
 @import "footer";
 @import "pricing";
+@import "blog";
 
 //Общие стили>=====================================================================================
 ul {
@@ -323,6 +324,14 @@ html, body {
   }
 
   &_tariff {
+    margin: 0 0 150px 0;
+
+    @media (max-width: $md2+px) {
+      margin: 0 0 100px 0;
+    }
+  }
+
+  &_order-food {
     margin: 0 0 150px 0;
 
     @media (max-width: $md2+px) {

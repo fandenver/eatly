@@ -1,4 +1,4 @@
-import {_slideToggle} from "./slider.js";
+import {_slideToggle} from "./modules/slider.js";
 
 // todo: при открытии вкладки изменить знак + в кнопке на - как на макете
 const titleQuestionButtons = document.querySelectorAll('.questions-page_row');
