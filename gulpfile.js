@@ -19,10 +19,10 @@ import {scss} from "./gulp/tasks/scss.js";
 import {images} from "./gulp/tasks/images.js";
 
 function watcher() {
-    gulp.watch(path.watch.html, html);
-    gulp.watch(path.watch.js, js);
-    gulp.watch(path.watch.scss, scss);
-    gulp.watch(path.watch.images, images);
+    gulp.watch(path.watch.html, {usePolling: true}, html);
+    gulp.watch(path.watch.js, {usePolling: true}, js);
+    gulp.watch(path.watch.scss, {usePolling: true}, scss);
+    gulp.watch(path.watch.images, {usePolling: true}, images);
 }
 
 const mainTasks = gulp.series(gulp.parallel(html, scss, js, images));
