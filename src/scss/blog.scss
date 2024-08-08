@@ -1,10 +1,19 @@
+@import "var";
+
 .order-food-page {
   &_content {
 
+    @media (max-width: $md3+px) {
+      display: grid;
+    }
   }
 
   &_header {
     margin: 0 0 70px 0;
+
+    @media (max-width: $md3+px) {
+      display: contents;
+    }
   }
 
   &_main-title {
@@ -14,16 +23,40 @@
     font-weight: 600;
     line-height: 44px;
     padding: 15px 0;
+
+    @media (max-width: $md3+px) {
+      order: 1;
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    @media (max-width: $md4+px) {
+      font-size: 18px;
+    }
   }
 
   &_written-by {
     display: flex;
     padding: 20px 0;
     margin: 0 0 50px 0;
+
+    @media (max-width: $md3+px) {
+      order: 2;
+      border-bottom: 1px solid #A6A6A6;
+      padding: 20px 0 40px 0;
+    }
   }
 
   &_icon {
     margin: 0 12px 0 0;
+
+    img {
+      max-width: 100%;
+    }
+
+    @media (max-width: $md4+px) {
+      width: 39px;
+    }
   }
 
   &_description {
@@ -37,6 +70,11 @@
     font-size: 15px;
     font-weight: 400;
     line-height: 22px;
+
+    @media (max-width: $md4+px) {
+      font-size: 11px;
+      line-height: 16px;
+    }
   }
 
   &_person {
@@ -45,16 +83,53 @@
     font-size: 22px;
     font-weight: 500;
     line-height: 33px;
+
+    @media (max-width: $md4+px) {
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
 
   &_image {
     img {
       max-width: 100%;
     }
+
+    @media (max-width: $md3+px) {
+      margin: 0 0 50px 0;
+      order: 4;
+    }
+  }
+
+  &_body {
+    display: flex;
+
+    @media (max-width: $md3+px) {
+      display: contents;
+    }
+  }
+
+  &_articles {
+    padding: 0 50px 0 0;
+
+    @media (max-width: $md3+px) {
+      display: contents;
+    }
   }
 
   &_article {
     margin: 0 0 90px 0;
+
+    @media (max-width: $md3+px) {
+      order: 5;
+      margin: 0 0 50px 0;
+
+      &:first-child {
+        @media (max-width: $md3+px) {
+          order: 3;
+        }
+      }
+    }
   }
 
   &_title {
@@ -64,6 +139,12 @@
     font-weight: 600;
     line-height: 44px;
     margin: 0 0 50px 0;
+
+    @media (max-width: $md3+px) {
+      font-size: 17px;
+      line-height: 23px;
+      margin: 0 0 20px 0;
+    }
   }
 
   p {
@@ -72,11 +153,20 @@
     font-size: 22px;
     font-weight: 400;
     line-height: 44px;
+
+    @media (max-width: $md3+px) {
+      font-size: 12px;
+      line-height: 24px;
+    }
   }
 
   ul {
     margin: 50px 0 0 0;
     padding: 0 0 0 23px;
+
+    @media (max-width: $md3+px) {
+      margin: 20px 0 0 0;
+    }
   }
 
   li {
@@ -86,6 +176,19 @@
     font-size: 22px;
     font-weight: 400;
     line-height: 44px;
+
+    @media (max-width: $md3+px) {
+      font-size: 12px;
+      line-height: 24px;
+    }
+  }
+
+  &_footer {
+    display: flex;
+
+    @media (max-width: $md3+px) {
+      order: 6;
+    }
   }
 
   &_btn {
@@ -100,5 +203,118 @@
       background: url("../images/main/arrow-button.png") right no-repeat;
       padding: 0 60px 0 0;
     }
+
+    @media (max-width: $md3+px) {
+      padding: 17px 15px 17px 15px;
+      flex: 0 1 137px;
+
+      span {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 14px;
+        padding: 0 40px 0 0;
+      }
+    }
+  }
+
+  &_article-carts {
+
+  }
+}
+
+.carts-articles {
+
+  @media (max-width: $md2+px) {
+    display: none;
+  }
+
+  &_content {
+    display: inline-flex;
+    flex-direction: column;
+    border-left: 1px solid #9B9B9B;
+    padding: 0 0 0 40px;
+  }
+
+  &_header {
+    color: #252525;
+    font-family: Poppins, sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 44px;
+    margin: 0 0 30px 0;
+  }
+
+  &_items {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &_item {
+    box-shadow: 0 4px 20px 0 #00000040;
+    margin: 0 0 50px 0;
+    border-radius: 15px;
+    padding: 20px 15px;
+
+    &:last-child {
+      margin: 0 0 0 0;
+    }
+  }
+
+  &_image {
+    margin: 0 0 20px 0;
+  }
+
+  &_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &_title {
+    color: #252525;
+    font-family: Poppins, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 21px;
+    margin: 0 0 20px 0;
+  }
+
+  &_icon {
+    margin: 0 10px 0 0;
+    width: 37px;
+    height: 37px;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &_written-by {
+    display: flex;
+    align-items: center;
+  }
+
+  &_written {
+    font-family: Poppins, sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 15px;
+    color: #8D8D8D;
+  }
+
+  &_person {
+    color: #000000;
+    font-family: Poppins, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+  }
+
+  &_date {
+    color: #B7B4B4;
+    font-family: Poppins, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 27px;
   }
 }

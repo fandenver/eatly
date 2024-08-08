@@ -1,0 +1,147 @@
+@import "var";
+
+.contacts-page {
+
+  &_content {
+    display: flex;
+  }
+
+  &_column {
+    flex: 0 1 50%;
+  }
+
+  &_block {
+    background-color: #6C5FBC;
+    width: 531px;
+    height: 818px;
+    position: absolute;
+    left: 0;
+    padding: 85px 0;
+
+    img {
+      position: absolute;
+      right: -10%;
+      bottom: -10%;
+
+      //todo: недоделан псевдоэлемент
+      //
+      //&::before {
+      //  content: "";
+      //  position: absolute;
+      //  background: url("../images/menu/weekend/illustration.png") 0 0 no-repeat;
+      //  width: 52px;
+      //  height: 42px;
+      //  top: -100%;
+      //  left: 117%;
+      //
+      //}
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: url("../images/contacts/star-01.png") 0 0 no-repeat;
+      width: 20px;
+      height: 20px;
+      top: 5%;
+      left: 17%;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      background: url("../images/contacts/star-02.png") 0 0 no-repeat;
+      width: 20px;
+      height: 23px;
+      top: 10%;
+      left: 14%;
+    }
+  }
+
+  &_title {
+    text-align: center;
+    font-family: Poppins, sans-serif;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 50.4px;
+    color: #F9F9F9;
+    white-space: nowrap;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: url("../images/contacts/arrow-white.png") 0 0 no-repeat;
+      width: 336px;
+      height: 150px;
+      top: 15%;
+      left: 17%;
+    }
+  }
+
+  form > &_header {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 55px;
+    color: #252525;
+
+    span {
+      font-size: 40px;
+      font-weight: 600;
+      line-height: 55px;
+    }
+  }
+
+  &_form {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 0 130px;
+  }
+
+  label {
+    display: flex;
+    flex-direction: column;
+
+    input, textarea {
+      border: 2px solid #6C5FBC;
+      padding: 25px 25px;
+      border-radius: 17px;
+      margin: 0 0 25px 0;
+      color: #201F1F;
+      font-size: 17px;
+      font-weight: 600;
+      line-height: 25px;
+
+      &::placeholder {
+        color: #B6B6B6;
+        font-size: 17px;
+        font-weight: 600;
+        line-height: 25px;
+        text-transform: uppercase;
+      }
+    }
+
+    textarea {
+      margin: 50px 0 50px 0;
+      flex: 0 1 345px;
+    }
+  }
+
+  form > &_btn {
+    padding: 22px;
+    font-family: Poppins, sans-serif;
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 31px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: url("../images/contacts/arrow-blue.png") 0 0 no-repeat;
+      width: 143px;
+      height: 123px;
+      top: 20%;
+      left: -27%;
+    }
+  }
+}

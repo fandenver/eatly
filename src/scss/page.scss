@@ -4,6 +4,7 @@
 @import "footer";
 @import "pricing";
 @import "blog";
+@import "contacts";
 
 //Общие стили>=====================================================================================
 ul {
@@ -25,7 +26,7 @@ a.text {
   text-decoration: none;
 }
 
-input {
+input, textarea {
   outline: none;
 }
 
@@ -332,6 +333,14 @@ html, body {
   }
 
   &_order-food {
+    margin: 0 0 150px 0;
+
+    @media (max-width: $md2+px) {
+      margin: 0 0 100px 0;
+    }
+  }
+
+  &_contacts {
     margin: 0 0 150px 0;
 
     @media (max-width: $md2+px) {

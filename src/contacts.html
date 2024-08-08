@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html', {
+"title": "Contacts"
+})
+<body>
+<div class="wrapper">
+    @@include('html/header.html', {})
+    <main class="page">
+        <div class="page_contacts contacts-page">
+            <div class="contacts-page_block">
+                <div class="contacts-page_title">Just Contact</div>
+                <img src="images/contacts/phone.png" alt="phone">
+            </div>
+            <div class="contacts-page_container _container">
+                <div class="contacts-page_content">
+                    <div class="contacts-page_column">
+                    </div>
+                    <div class="contacts-page_column">
+                        <form class="contacts-page_form">
+                            <h1 class="contacts-page_header _title-main">Customer <span>Support</span></h1>
+                            <label>
+                                <input type="text" placeholder="full name">
+                                <input type="email" placeholder="enter your email">
+                                <textarea placeholder="Enter The Problem Or Query"></textarea>
+                            </label>
+                            <button class="contacts-page_btn btn-blue">Send Now</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    @@include('html/footer.html', {})
+    @@include('html/scripts.html', {})
+</div>
+</body>
+</html>
