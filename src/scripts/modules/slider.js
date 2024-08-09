@@ -23,11 +23,11 @@ let _slideUp = (target, duration = 500) => {
     }, duration)
 }
 
-let _slideDown = (target, duration = 500) => {
+let _slideDown = (target, displayValue = 'block', duration = 500) => {
     target.style.removeProperty('display');
     let display = window.getComputedStyle(target).display;
     if (display === 'none')
-        display = 'block';
+        display = displayValue;
 
     target.style.display = display;
     let height = target.offsetHeight;
@@ -54,13 +54,13 @@ let _slideDown = (target, duration = 500) => {
     }, duration)
 }
 
-export let _slideToggle = (target, duration = 500) => {
+export let _slideToggle = (target, displayValue = 'block',  duration = 500) => {
     if (!target.classList.contains('_slide')) {
         target.classList.add('_slide');
         if (window.getComputedStyle(target).display === 'none') {
-            return _slideDown(target, duration);
+            return _slideDown(target, displayValue, duration);
         } else {
-            return  _slideUp(target, duration);
+            return _slideUp(target, duration);
         }
     }
 }

@@ -872,7 +872,6 @@ html, body {
   }
 
   &_image {
-    position: relative;
     margin: 0 0 15px 0;
 
     @media (max-width: $md4+px) {
@@ -880,7 +879,6 @@ html, body {
     }
 
     img {
-      position: absolute;
       max-width: 100%;
     }
 

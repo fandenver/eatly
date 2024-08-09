@@ -4,38 +4,25 @@
 
   &_content {
     display: flex;
+
+    @media (max-width: $md3+px) {
+      flex-direction: column;
+    }
   }
 
   &_column {
+    position: relative;
     flex: 0 1 50%;
   }
 
   &_block {
     background-color: #6C5FBC;
-    width: 531px;
+    width: 100%;
     height: 818px;
     position: absolute;
-    left: 0;
+    left: -33%;
     padding: 85px 0;
-
-    img {
-      position: absolute;
-      right: -10%;
-      bottom: -10%;
-
-      //todo: недоделан псевдоэлемент
-      //
-      //&::before {
-      //  content: "";
-      //  position: absolute;
-      //  background: url("../images/menu/weekend/illustration.png") 0 0 no-repeat;
-      //  width: 52px;
-      //  height: 42px;
-      //  top: -100%;
-      //  left: 117%;
-      //
-      //}
-    }
+    text-align: center;
 
     &::before {
       content: "";
@@ -56,16 +43,63 @@
       top: 10%;
       left: 14%;
     }
+
+    @media (max-width: 1500px) {
+      display: none;
+    }
+
+    @media (max-width: $md3+px) {
+      display: block;
+      position: relative;
+      width: 100%;
+      height: 150px;
+      left: 0;
+      margin: 0 0 50px 0;
+      padding: 30px;
+
+      &::before, &::after {
+        display: none;
+      }
+    }
+  }
+
+  &_image {
+    position: absolute;
+    right: 10%;
+    bottom: -10%;
+
+    img {
+      max-width: 100%;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: url("../images/menu/weekend/illustration.png") 0 0 no-repeat;
+      width: 52px;
+      height: 42px;
+      top: -5%;
+      left: 98%;
+    }
+
+    @media (max-width: 1500px) {
+      right: 35%;
+      top: 15%;
+    }
+
+    @media (max-width: $md3+px) {
+      display: none;
+    }
   }
 
   &_title {
-    text-align: center;
     font-family: Poppins, sans-serif;
     font-size: 48px;
     font-weight: 600;
     line-height: 50.4px;
     color: #F9F9F9;
     white-space: nowrap;
+    position: relative;
 
     &::before {
       content: "";
@@ -73,8 +107,23 @@
       background: url("../images/contacts/arrow-white.png") 0 0 no-repeat;
       width: 336px;
       height: 150px;
-      top: 15%;
-      left: 17%;
+      top: 65%;
+      left: 22%;
+    }
+
+    @media (max-width: $md3+px) {
+      display: inline-block;
+      padding: 0 0 0 20px;
+      font-size: 24px;
+      line-height: 29px;
+
+      &::before {
+        background: url("../images/contacts/arrow-small-white.png") 0 0 no-repeat;
+        left: -44%;
+        top: -20%;
+        width: 77px;
+        height: 100px;
+      }
     }
   }
 
@@ -83,11 +132,16 @@
     font-weight: 600;
     line-height: 55px;
     color: #252525;
+    white-space: nowrap;
 
     span {
       font-size: 40px;
       font-weight: 600;
       line-height: 55px;
+    }
+
+    @media (max-width: $md3+px) {
+      display: none;
     }
   }
 
@@ -95,6 +149,14 @@
     display: flex;
     flex-direction: column;
     padding: 0 0 0 130px;
+
+    @media (max-width: 1500px) {
+      padding: 0 0 0 80px;
+    }
+
+    @media (max-width: $md2+px) {
+      padding: 0;
+    }
   }
 
   label {
@@ -103,7 +165,7 @@
 
     input, textarea {
       border: 2px solid #6C5FBC;
-      padding: 25px 25px;
+      padding: 25px;
       border-radius: 17px;
       margin: 0 0 25px 0;
       color: #201F1F;
@@ -118,11 +180,31 @@
         line-height: 25px;
         text-transform: uppercase;
       }
+
+      @media (max-width: $md3+px) {
+        padding: 18px;
+        border-radius: 12px;
+        margin: 0 0 15px 0;
+
+        &, &::placeholder {
+          font-size: 12px;
+          line-height: 16px;
+        }
+      }
     }
 
     textarea {
       margin: 50px 0 50px 0;
       flex: 0 1 345px;
+
+      @media (max-width: $md3+px) {
+        margin: 30px 0 30px 0;
+        flex: 0 1 210px;
+      }
+    }
+
+    input[type=email] {
+      margin: 0 0 0 0;
     }
   }
 
@@ -142,6 +224,16 @@
       height: 123px;
       top: 20%;
       left: -27%;
+    }
+
+    @media (max-width: $md3+px) {
+      font-size: 14px;
+      line-height: 20px;
+      padding: 18px;
+
+      &::before {
+        display: none;
+      }
     }
   }
 }

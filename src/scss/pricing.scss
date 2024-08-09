@@ -149,7 +149,7 @@
     @media (max-width: $md2+px) {
       display: grid;
       padding: 30px 40px;
-      margin: 0 0 100px 0;
+      margin: 0 0 50px 0;
 
       &:last-child {
         margin: 0 0 0 0;
@@ -181,10 +181,6 @@
 
     @media (max-width: $md4+px) {
       grid-template-columns: 40px 1fr;
-    }
-
-    &._active {
-      display: grid !important;
     }
   }
 
