@@ -54,11 +54,11 @@ let _slideDown = (target, displayValue = 'block', duration = 500) => {
     }, duration)
 }
 
-export let _slideToggle = (target, displayValue = 'block',  duration = 500) => {
+export let _slideToggle = (target, displayValue,  duration = 500) => {
     if (!target.classList.contains('_slide')) {
         target.classList.add('_slide');
         if (window.getComputedStyle(target).display === 'none') {
-            return _slideDown(target, displayValue, duration);
+            return _slideDown(target, displayValue ?? 'block', duration);
         } else {
             return _slideUp(target, duration);
         }
