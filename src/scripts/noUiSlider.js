@@ -1,3 +1,6 @@
+import noUiSlider from 'nouislider';
+window.noUiSlider = noUiSlider;
+
 const priceSlider = document.querySelector('.form-filter_slider');
 
 if(priceSlider) {

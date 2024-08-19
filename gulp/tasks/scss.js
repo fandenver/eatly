@@ -3,30 +3,37 @@ import gulpSass from "gulp-sass";
 import rename from 'gulp-rename';
 
 import cleanCss from 'gulp-clean-css';
-import webcss from 'gulp-webpcss';
+import webpcss from 'gulp-webpcss';
 import autoprefixer from 'gulp-autoprefixer';
 import groupCssMediaQueries from 'gulp-group-css-media-queries';
 
 const sass = gulpSass(dartSass);
 
 export const scss = () => {
-    return app.gulp.src(app.path.src.scss, {sourcemaps: true})
+    return app.gulp.src(app.path.src.scss, {sourcemaps: app.isDev})
         .pipe(app.plugins.plumber(
             app.plugins.notify.onError({
                 title: "SCSS",
                 message: "Error: <%= error.message %>"
             })))
+        // .pipe(app.plugins.replace(/img\//g, '../src/img/'))
         .pipe(sass({
             outputStyle: 'expanded'
         }))
-        // .pipe(app.plugins.replace(/images\//g, '../../src/images/'))
-        .pipe(groupCssMediaQueries())
-        // .pipe(webcss({
-        //             webpClass: ".webp",
-        //             noWebpClass: ".no-webp"
-        //         }
-        //     )
-        // )
+        .pipe(app.plugins.if(
+                app.isBuild,
+                groupCssMediaQueries()
+            )
+        )
+        .pipe(app.plugins.if(
+                app.isBuild,
+                webpcss({
+                        webpClass: ".webp",
+                        noWebpClass: ".no-webp"
+                    }
+                )
+            )
+        )
         .pipe(app.plugins.if(
                 app.isBuild,
                 autoprefixer({
@@ -37,8 +44,12 @@ export const scss = () => {
             )
         )
         // Раскомментировать если нужен не сжатый дубль файла стилей
-        // .pipe(app.gulp.dest(app.path.build.css))
-        .pipe(cleanCss())
+        .pipe(app.gulp.dest(app.path.build.css))
+        .pipe(app.plugins.if(
+                app.isBuild,
+                cleanCss()
+            )
+        )
         .pipe(rename({
             extname: ".min.css"
         }))
